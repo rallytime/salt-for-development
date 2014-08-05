@@ -1,6 +1,7 @@
 include:
   - salt-for-development
 
+# Append python path to bashrc file and source it
 pythonpath:
   file.append:
     - name: /home/dev-user/.bashrc
