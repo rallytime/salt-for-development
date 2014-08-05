@@ -1,7 +1,7 @@
 include:
   - salt-for-development
 
-# Append python path to bashrc file and source it
+# Append python path to bashrc file
 pythonpath:
   file.append:
     - name: /home/dev-user/.bashrc
@@ -11,7 +11,3 @@ pythonpath:
     - require:
       - git: rallytime_salt
       - git: rallytime_salt_testing
-  cmd.run:
-    - name: source /home/dev-user/.bashrc
-    - require:
-      - file: pythonpath
