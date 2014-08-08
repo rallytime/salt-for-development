@@ -11,6 +11,11 @@ dev-user:
   file.directory:
     - user: dev-user
     - makedirs: True
+
+# Make sure git is installed
+git:
+  pkg.installed:
+    - name: git
     - require_in:
       - git: local_repo_name
       - git: local_repo_email
