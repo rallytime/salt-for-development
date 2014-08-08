@@ -18,4 +18,4 @@ testing_requirements:
     - requirements: /home/dev-user/SaltStack/salt/dev_requirements_python27.txt
     - require:
       - pkg: python-pip
-      - git: rallytime_salt
+      - git: salt

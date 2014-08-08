@@ -28,8 +28,8 @@ config_name:
     - user: dev-user
     - is_global: True
     - require_in:
-      - git: rallytime_salt
-      - git: rallytime_salt_testing
+      - git: salt
+      - git: salt_testing
 
 # Set global git config for email
 config_email:
@@ -39,5 +39,5 @@ config_email:
     - user: dev-user
     - is_global: True
     - require_in:
-      - git: rallytime_salt
-      - git: rallytime_salt_testing
+      - git: salt
+      - git: salt_testing

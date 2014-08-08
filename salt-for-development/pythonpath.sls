@@ -9,5 +9,5 @@ pythonpath:
       - export PYTHONPATH=/home/dev-user/SaltStack/salt/:/home/dev-user/SaltStack/salt-testing
       - export PATH=$PATH:/home/dev-user/SaltStack/salt/scripts/:/home/dev-user/SaltStack/salt/tests/
     - require:
-      - git: rallytime_salt
-      - git: rallytime_salt_testing
+      - git: salt
+      - git: salt_testing

@@ -2,7 +2,7 @@ include:
   - salt-for-development
 
 # Clone salt-testing from forked repo, change remote name, and add upstream
-rallytime_salt_testing:
+salt_testing:
   git.latest:
     - name: https://github.com/rallytime/salt-testing.git
     - target: /home/dev-user/SaltStack/salt-testing
@@ -11,7 +11,7 @@ rallytime_salt_testing:
     - name: git remote add upstream https://github.com/saltstack/salt-testing
     - cwd: /home/dev-user/SaltStack/salt-testing
     - require:
-      - git: rallytime_salt_testing
+      - git: salt_testing
     - require_in:
       - cmd: fetch_upstream_salt_testing
 
