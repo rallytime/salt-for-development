@@ -17,24 +17,26 @@ git:
   pkg.installed:
     - name: git
     - require_in:
-      - git: local_repo_name
-      - git: local_repo_email
+      - git: config_name
+      - git: config_email
 
 # Set global git config for username
-local_repo_name:
+config_name:
   git.config:
     - name: user.name
     - value: rallytime
+    - user: dev-user
     - is_global: True
     - require_in:
       - git: rallytime_salt
       - git: rallytime_salt_testing
 
 # Set global git config for email
-local_repo_email:
+config_email:
   git.config:
     - name: user.email
     - value: nicole@saltstack.com
+    - user: dev-user
     - is_global: True
     - require_in:
       - git: rallytime_salt
