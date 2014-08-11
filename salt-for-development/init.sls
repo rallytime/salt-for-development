@@ -12,14 +12,6 @@ dev-user:
     - user: dev-user
     - makedirs: True
 
-# Make sure git is installed
-git:
-  pkg.installed:
-    - name: git
-    - require_in:
-      - git: config_name
-      - git: config_email
-
 # Set global git config for username
 config_name:
   git.config:
