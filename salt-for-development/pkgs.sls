@@ -12,6 +12,11 @@ python-pip:
   pkg.installed:
     - name: {{ pip }}
 
+# Insall vim
+vim:
+  pkg.installed:
+    - name: vim
+
 # Make sure git is installed
 git:
   pkg.installed:
