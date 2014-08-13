@@ -14,9 +14,17 @@ salt_testing:
       - git: salt_testing
     - require_in:
       - cmd: fetch_upstream_salt_testing
+      - cmd: pull_salt_testing_develop
 
 # Fetch all tags and branches from upstream salt-testing
 fetch_upstream_salt_testing:
   cmd.run:
     - name: git fetch upstream
     - cwd: /home/dev-user/SaltStack/salt-testing
+
+# Git pull salt-testing's upstream develop into current develop branch
+pull_salt_testing_develop:
+  cmd.run:
+    - name: git pull upstream develop
+    - cwd: /home/dev-user/SaltStack/salt-testing
+
