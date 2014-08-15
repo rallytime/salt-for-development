@@ -7,6 +7,15 @@ include:
   {% set pip = 'python-pip' %}
 {% endif %}
 
+{% if grains['os'] == 'Ubuntu' %}
+python-apt:
+  pkg.installed:
+    - require_in:
+      - pkg: vim
+      - pkg: python-pip
+      - pkg: git
+{% endif %}
+
 # Install pip
 python-pip:
   pkg.installed:
