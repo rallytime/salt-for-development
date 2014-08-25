@@ -17,6 +17,12 @@ python-apt:
       - pkg: git
 {% endif %}
 
+{% if grains['os_family'] == 'RedHat' %}
+  {% set vim = 'vim-enhanced' %}
+{% else %}
+  {% set vim = 'vim' %}
+{% endif %}
+
 # Install pip
 python-pip:
   pkg.installed:
@@ -25,7 +31,7 @@ python-pip:
 # Insall vim
 vim:
   pkg.installed:
-    - name: vim
+    - name: {{ vim }}
 
 # Make sure git is installed
 git:
