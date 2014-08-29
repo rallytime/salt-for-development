@@ -7,16 +7,6 @@ include:
   {% set pip = 'python-pip' %}
 {% endif %}
 
-{% if grains['os_family'] == 'Debian' %}
-python-apt:
-  pkg.installed:
-    - name: python-apt
-    - require_in:
-      - pkg: vim
-      - pkg: python-pip
-      - pkg: git
-{% endif %}
-
 {% if grains['os_family'] == 'RedHat' %}
   {% set vim = 'vim-enhanced' %}
 {% else %}
